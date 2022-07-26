@@ -11,6 +11,7 @@ WORKDIR /home/flasky
 COPY requirements requirements
 RUN python -m venv venv
 RUN venv/bin/pip install -r requirements/dev.txt
+RUN venv/bin/pip install gunicorn
 
 COPY app app
 COPY migrations migrations
